@@ -22,7 +22,7 @@ var encryptPGP = function(secret, pub) {
  * @args
  *   dataPGP object with attributes: messageEncrypted, rndEncrypted
  *   priv: the private key of the receiver
- * @return dataPGP with attributes: messageEncrypted rndEncrypted
+ * @return decrypted message
  */
 var decryptPGP = function(dataPGP, priv) {
   var rnd = priv.decrypt(dataPGP.rnd, 'base64', 'utf8')
